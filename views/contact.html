@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Twitter bootstrap 3</title>
+    <link type="text/css" rel="stylesheet" href="../styles/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="../styles/bootstrap.css"/>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<!--Fix navigation bar with dropdown start-->
+ <!--Fix navigation bar with dropdown start-->
+  <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand">Creativity Tuts</a>
+          </div>
+
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li><a href="../index.html">Home</a> </li>
+                  <!-- <li><a href="about.html">About</a> </li> -->
+                  <li><a href="features.html">Features</a> </li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li ><a href="#">Bootstrap </a></li>
+                          <li><a href="#">AngularJS </a></li>
+                          <li><a href="#">Backbone</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="contact.html">Contact</a> </li>
+                  <li> <a data-toggle="modal" href="#mySignup">Login</a></li>
+              </ul>
+
+          </div>
+          <!--<div>-->
+              <!--<p>-->
+                  <!--<a data-toggle="modal" href="#mySignup">Login</a>-->
+              <!--</p>-->
+          <!--</div>-->
+      </div>
+  </div>
+  <!--Fix navigation bar with dropdown end-->
+<!--Fix navigation bar with dropdown end-->
+
+<!--Form starts-->
+<br/><br/><br/>
+ <div class="container">
+     <div class="row">
+         <div class="col-md-12">
+             <h2>Contact Form</h2><hr/>
+
+             <form class="form-horizontal">
+
+                 <div class="form-group">
+                     <label for="name" class="col-sm-2 control-label">Name :</label>
+                     <div class="col-sm-4">
+                         <input type="text" class="form-control"placeholder="Enter Name " />
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="email" class="col-sm-2 control-label">Email :</label>
+                     <div class="col-sm-4">
+                         <input type="email" class="form-control"placeholder="Enter Email " />
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="address" class="col-sm-2 control-label">Address :</label>
+                     <div class="col-sm-4">
+                         <textarea  rows="3" class="form-control"placeholder="Enter address "></textarea>
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="phone" class="col-sm-2 control-label">Mobile number :</label>
+                     <div class="col-sm-4">
+                         <input type="tel" class="form-control" id="mobile" maxlength="10" pattern="\d*" placeholder="Enter mobile number " />
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="favourite" class="col-sm-2 control-label">Favourite Websites :</label>
+                     <div class="col-sm-4">
+                         <label class="checkbox-inline">
+                             <input type="checkbox" value="option1">Youtube
+                         </label>
+                         <label class="checkbox-inline">
+                             <input type="checkbox" value="option1">Google
+                         </label>
+                         <label class="checkbox-inline">
+                             <input type="checkbox" value="option1">Twitter
+                         </label>
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="gender" class="col-sm-2 control-label">Select Gender :</label>
+                     <div class="col-sm-4">
+                         <label class="radio-inline">
+                             <input type="radio" name="gender">Male
+                         </label>
+                         <label class="radio-inline">
+                             <input type="radio"name="gender">Female
+                         </label>
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <label for="city" class="col-sm-2 control-label">Select City :</label>
+                     <div class="col-sm-4">
+                         <select class="form-control">
+                             <option>select city</option>
+                             <option>Hyd</option>
+                             <option>Mumbai</option>
+                             <option>Kolkatta</option>
+                             <option>Bangalore</option>
+
+                         </select>
+
+                     </div>
+                 </div>
+
+                 <div class="form-group">
+                     <div class="col-sm-offset-2  col-sm-4">
+                         <button type="submit" class="btn btn-primary">Submit</button>
+                         <button type="reset" class="btn">Reset
+                         </button>
+
+                     </div>
+                 </div>
+
+
+
+
+
+
+
+             </form>
+         </div>
+     </div>
+ </div>
+    
+    
+                  <div class="modal fade" id="mySignup" tabindex="-1" role="dialog" aria-hidden="true">
+
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h2>Login</h2>
+                              </div>
+                              <div class="modal-body">
+                                  <form class="form-horizontal form-group">
+                                      <div class="form-group">
+                                          <label for="email" class="col-md-4 control-label">Email :</label>
+                                          <div class="col-md-4">
+                                              <input type="email" class="form-control"placeholder="Enter Email " />
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                          <label for="password" class="col-md-4 control-label">Password :</label>
+                                          <div class="col-md-4">
+                                              <input type="password" class="form-control"placeholder="Enter Password " />
+                                          </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                          <div class="col-md-4 col-md-offset-2" style="margin-left: 200px;width: 37%">
+                                              <label type="submit" class="btn btn-primary">Login</label><br/>
+                                              <p style="text-decoration: none"><a href="#">Forgot Password</a></p>
+                                              <!--<button type="button" class="btn btn-danger">new account</button>-->
+
+                                          </div>
+                                      </div>
+                                  </form>
+
+
+
+                                  <!--<p>This is modal body...</p>-->
+                              </div>
+                              <div class="modal-footer">
+                                  <div class="col-md-4 col-md-offset-2">
+
+                                      <p><a class="btn btn-large btn-danger" href="views/contact.html" style="margin-left: 60%"> Don't have account?</a> </p>
+                                      <!--<button type="button" class="btn btn-primary">Sign Up</button>-->
+
+                                      <!--<button type="button" class="btn btn-danger">Dont have account</button>-->
+
+                                  </div>
+
+                                  <!--<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>-->
+                              </div>
+                          </div>
+
+                      </div>
+
+
+
+
+                  </div>
+
+
+<!--footer and modal start-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <hr/>
+            <p>Copyright &copy;vishu.
+                <a data-toggle="modal" href="#myModal">Terms and Conditions</a>
+            </p>
+
+            <!--modal starts-->
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Terms and Conditions...</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is modal body...</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--<button class="btn btn-success">test</button>-->
+
+
+<!--<script  type="text/javascript" src="js/bootstrap.js"></script>-->
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+</body>
+</html>
