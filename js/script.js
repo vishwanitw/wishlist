@@ -1,6 +1,55 @@
 
 $(document).ready(function () {
 
+     //var wish = data;
+    $.getJSON('data/data.json',function(data){
+        console.log(data);
+
+
+       //console.log($(this).data('data._id'));
+        var source   = $("#entry-template").html();
+        var template = Handlebars.compile(source);
+        var parent="<div>";
+         data.forEach(function(item){
+             parent+=template(item);
+        })
+        parent+="</div>";
+        $('.row').append(parent);
+
+    });
+
+
+    /*$("#wishlist").on('hidden.bs.modal', function () {
+
+        $(this).data('bs.modal', null);
+    });*/
+    $("#wishlist").on("click",  function (e) {
+        //alert("hi");
+        var prodId= $(e.relatedTarget).data('prodId');
+        alert(prodId)
+    });
+
+    /*(function($) {
+        var infoModal = $('#wishlist');
+
+        $('.thumbnail').on('click', function(){
+
+
+          *//*  $.ajax({
+                type: "GET",
+                url: 'data/data.json'+$(this).data('id'),
+                dataType: 'json',
+                success: function(data){
+                    htmlData = '<ul><li>title: '+data.name+'</li><li>age: '+data.price+'</li></ul>';
+                    infoModal.find('.modal-body').html(htmlData);
+                    modal.modal('show');
+                }*//*
+            });
+
+            return false;
+        });
+    })(jQuery);*/
+
 	items =  [{
 	     		prod_name: 'samsung',
          		prod_cost: 25000
@@ -203,16 +252,16 @@ var hero;
 
 
 
-    document.getElementById("hero-graphic").src='data:image/jpg;base64,' + hero;
+    /*document.getElementById("hero-graphic").src='data:image/jpg;base64,' + hero;
     document.getElementById("image-8").src='data:image/jpg;base64,' + google;
     document.getElementById("beats-graphic").src='data:image/jpg;base64,' + beats;
-    document.getElementById("image-2").src='data:image/jpg;base64,' + jeans;
+  //  document.getElementById("image-2").src='data:image/jpg;base64,' + jeans;
     document.getElementById("image-3").src='data:image/jpg;base64,' + desktop;
     document.getElementById("image-4").src='data:image/jpg;base64,' + ipad;
     document.getElementById("image-5").src='data:image/jpg;base64,' + camara;
     document.getElementById("image-6").src='data:image/jpg;base64,' + tech;
     document.getElementById("image-7").src='data:image/jpg;base64,' + hunter;
-
+*/
     //document.getElementById("apl-graphic").src='data:image/jpg;base64,' + apl;
 
 
