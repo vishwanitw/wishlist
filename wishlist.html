@@ -2,17 +2,15 @@
 <html>
 <head>
 	<title></title>
-	<link type="text/css" rel="stylesheet" href="main.css"/>
+	<!--<link type="text/css" rel="stylesheet" href="main.css"/>-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 
 	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <script type="text/javascript">
-    $(document).ready(function(){
-      var image = document.getElementById('image_one');
-        alert("jjje");
-    });
+    
+
 
 </script>
 <body>
@@ -22,15 +20,19 @@
 <ul>
     
 </ul>
-<form name="buy-now-form" method="post" action="https://www.flipkart.com/viewcart">
-                        <input type="hidden" name="eid" value="LSTMOBDVHC6XKKPZ3GZMUFPNI">
-                        <input type="hidden" name="__FK" value="V2da165f5917184c397e5c31c53408c33bs2e37Kz8EJQs/RmMDPz81ShQ/B9frV1ZqstmGxK3ZHpd8LVVoV8KD9WhyMdefoI6JIMfBWSIIXVOmkDly9oZw9ACJ2vXIy12n0oqqJn8NZz+z2ePOtYNVPhVs68yBQDXvBkejlLVtUv/VZDgxkrwbVT+exQ3M8KwIoLFDUjz4m1niAUowRz5h9CTfXAHNT4BCi//jCn0PUNnx140iVOaDue9GleLo/qaDXq7R33O4n4yyp+YGp2+uw4ZRDJE+Qz0I7dhwOyE1Xn4Egop7RPcyk6CG0Q==">
-                        <input type="hidden" name="add-to-lib" value="false">
-                        <input type="hidden" name="icmpid" value="">
-                        <input type="hidden" name="ppid" value="">
-                        <input type="submit" class="btn-buy-now btn-big  current" data-buy-listing-id="LSTMOBDVHC6XKKPZ3GZMUFPNI" data-listing-metrics="TO_BE_IMPLEMENTED" data-seller-id="wsr" data-pid="MOBDVHC6XKKPZ3GZ" data-vertical="mobile" data-disable-cart="true" data-is-large="false" data-is-in-cart="false" data-is-pin-serviceable="true" data-is-pin-available="false" data-is-listing-buyable="true" value="Add to Cart">
-                </form>
+<script type="application/javascript" src="js/script.js"></script>
+<script id="entry-template" type="text/x-handlebars-template">
+    <div class="col-md-4">
+        <img  alt={{desc}} src={{picture}} />
+        <!--<img class="img-rounded" id="image-one" src="images/apple.jpg" alt="apple image">-->
+        <div class="prod-name">{{name}}</div>
+        <div class="prod_price">Price is <span> {{price}}</span></div>
+        <!-- <button ng-click="addToCart()" class="btn btn-success">Add to WishList</button> -->
 
+        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-prod-id={{_id}}>Add to wishlist</a>
+    </div>
+</script>
+<script src="js/handlebars-v3.0.0.js"></script>
 
 </body>
 </html>
