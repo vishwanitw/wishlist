@@ -1,7 +1,6 @@
 
 $(document).ready(function () {
 
-
     var selectedProduct;
     var source   = $("#entry-template").html();
     var template = Handlebars.compile(source);
@@ -36,7 +35,7 @@ $(document).ready(function () {
         var button = $(event.relatedTarget) // Button that triggered the modal
         var id = button.data('prod-id');
         var product = getProductWithId(id);
-        var selectedProduct= product;
+        var selectedProduct = product;
         var html=template(product);
         var modal = $(this);
         var modalBody=modal.find('.modal-body');
@@ -44,43 +43,30 @@ $(document).ready(function () {
         modalBody.append(html);
     });
 
-    /*$('.addtocart').click(function(){
-        //var $selectedProduct;
-        alert($selectedProduct);
-    });*/
-
 
     addToCart=function(){
         var button = $(event.relatedTarget) // Button that triggered the modal
         var id = button.data('prod-id');
         var product = getProductWithId(id);
-        var selectedProduct= product;
-        alert(selectedProduct);
-        console.log(selectedProduct);
-        //*var product_one;
-      /*  if ( localStorage.getItem('prod-1')) {
-            product_one =JSON.parse(localStorage.getItem('prod-1'));
-        }
-        else {
-            product_one =selectedProduct;
-            localStorage.setItem('prod-1',JSON.stringify(product_one));
-        }*//**//*
-       *//**//* if($(selectedProduct_id)){
-            console.log('already added');
-        }*//**//*
-        *//**//*var product_two;
-        if ( localStorage.getItem('prod-2')) {
-            product_two = localStorage.getItem('prod-2');
-        }
-        else {
-            product_two =selectedProduct;
-            localStorage.setItem('prod-1',product_two);
-        }*//**//*
+        selectedProduct = product;
+        var html=template(product);
 
-       // console.log(myProduct);
-       // $().push();*/
+
+        console.log(html);
+
+        var myURL="http://localhost:63342/wishlist/views";
+        window.open( myURL + "/?options="+$('ul').append(localStorage.getItem(product)) );
+
+        console.log(html);
 
     }
+
+    // Put the object into storage
+    localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
+    // Retrieve the object from storage
+    var retrievedObject = localStorage.getItem('selectedProduct');
+
+    //retrievedObject = JSON.parse(retrievedObject));
 
 
 
